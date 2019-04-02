@@ -4,21 +4,21 @@ function findMinAndRemove(array){
   let minIndex = 0
 
   for(let i = 0; i<array.length; i++){
-    if(array[i]<min){
-      min = array[i]
+    if(array[i]<cureentMin){
+      CurrentMin = array[i]
       minIndex = i
     }
   }
   array.splice(minIndex, 1)
-  return min;
+  return currentMin;
 }
 
 function insertionSort(array){
-  let newMin;
+  let min;
   let sorted = []
   while(array.length != 0){
-    newMin = findMinAndRemove(array)
-    sorted.push(newMin)
+    min = findMinAndRemove(array)
+    sorted.push(min)
   }
   return sorted
 }
