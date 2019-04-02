@@ -5,7 +5,8 @@ function findMinAndRemove(array){
       return Math.min(a,b)
     }
   )
-  
+
+  array.slice(indexOf(min),1)
 
 }
 
