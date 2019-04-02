@@ -1,12 +1,15 @@
 function findMinAndRemove(array){
 
-  var min = array.reduce(
-    function(a,b){
-      return Math.min(a,b)
-    }
-  )
+  let min = array[0]
+  let minIndex = 0
 
-  array.slice(indexOf(min),1)
+  for(let i = 0; i<array.length; i++){
+    if(array[i]<min){
+      min = array[i]
+      minIndex = i
+    }
+  }
+  array.splice(minIndex, 1)
 
 }
 
